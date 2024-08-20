@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary colors */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* Neutral colors */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+body{
+    font-size: 14px;
+    max-width: 1440px;
+    background-color: var(--Cream);
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container styling */
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 15vh;
+}
+/* End container styling */
+
+/* Preview card */
+.card{
+    max-width: 530px;
+    height: 470px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Image styling */
+.image{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+/* End image styling */
+
+/* Content styling */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--White);
+    border-radius: 0 10px 10px 0;
+}
+
+.product-category{
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 20px;
+
+}
+
+.product-name{
+    font-size: 2.5em;
+    font-family: Fraunces;
+    font-weight: 800;
+    line-height: 1em;
+    margin-bottom: 20px;
+}
+
+.description{
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 20px;
+}
+
+.product-price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--Dark-cyan);
+    margin-bottom: 10px;
+}
+
+.current-price{
+    font-size: 2.5em;
+    font-family: Fraunces;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.previous-price{
+    font-family: 'Poppins';
+    margin-bottom: 5px;
+}
+
+.add-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.add-btn:hover{
+    background-color: var(--Very-dark-blue);
+    cursor: pointer;
+}
+
+.add-btn i{
+    margin-right: 10px;
+}
+
+/* End content styling */
+
+/* ------------ Attribution sytle ------------ */
+.attribution { 
+    position: absolute;
+    bottom: 5%;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Media queries for mobile phones */
+
+@media (max-width: 557px){
+/* Container styling */
+.container{
+    padding: 5% 0;
+}
+/* End container styling */
+/* Preview card */
+.card{
+    max-width: 375px;
+    height: 650px;
+    flex-direction: column;
+}
+
+/* End preview card */
+
+/* Image styling */
+.image{
+    width: 100%;
+    height: 40%;
+    float: left;
+    background-image: url(images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.image img{
+    display: none;
+    
+}
+/* End image styling */
+
+/* Content styling */
+.content{
+    width: 100%;
+    height: 60%;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+}
+
+.product-category{
+    font-size: 1em;
+    margin-bottom: 15px;
+
+}
+
+.product-name{
+    font-size: 2.4em;
+    margin-bottom: 15px;
+}
+
+.description{
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+}
+
+.current-price{
+    font-size: 2.6em;
+    margin-right: 15px;
+}
+
+.add-btn{
+    font-size: 1.1em;
+}
+}
